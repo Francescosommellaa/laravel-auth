@@ -29,9 +29,6 @@ Route::middleware(['auth', 'verified'])
         // Mostra la dashboard dell'amministratore
         Route::get('/', [dashboardController::class, 'index'])->name('home');
         Route::resource('projects', ProjectController::class);
-
-        Route::get('projects/seed', [ProjectController::class, 'seed'])->name('projects.seed');
     });
-
 // Include le rotte di autenticazione
 require __DIR__ . '/auth.php';
