@@ -26,9 +26,10 @@ class ProjectController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
+            'programming_language' => 'required|string',
             'img' => 'nullable|string',
             'thumbnail_img' => 'nullable|string',
-            'website_url' => 'nullable|string|url',
+            'website_url' => 'required|string|url',
         ]);
 
         $validatedData['slug'] = Str::slug($request->name);
@@ -52,9 +53,10 @@ class ProjectController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
+            'programming_language' => 'required|string',
             'img' => 'nullable|string',
             'thumbnail_img' => 'nullable|string',
-            'website_url' => 'nullable|string|url',
+            'website_url' => 'required|string|url',
         ]);
 
         $validatedData['slug'] = Str::slug($request->name);

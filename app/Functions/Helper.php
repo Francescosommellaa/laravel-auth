@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class Helper
 {
-    public static function seedFakeProjects($count = 50)
+    public static function seedFakeProjects($count = 10)
     {
         // Crea un'istanza di Faker
         $faker = Faker::create();
@@ -16,12 +16,13 @@ class Helper
         // Loop per creare i progetti fittizi
         for ($i = 0; $i < $count; $i++) {
             Project::create([
-                'name' => $faker->sentence(3), // Nome del progetto
-                'description' => $faker->paragraph(4), // Descrizione del progetto
+                'name' => $faker->words(3, true), // Nome del progetto
+                'description' => $faker->paragraphs(4, true), // Descrizione del progetto
+                'programming_language' => $faker->words(3, true), // Linguaggi di programmazione del progetto
                 'img' => $faker->imageUrl(640, 480, 'business', true, 'Project'), // Immagine (facoltativa)
                 'thumbnail_img' => $faker->imageUrl(150, 150, 'business', true, 'Thumbnail'), // Immagine miniatura (facoltativa)
                 'website_url' => $faker->url, // Link al sito del progetto (facoltativo)
-                'slug' => Str::slug($faker->sentence(3)), // Slug generato dal nome
+                'slug' => Str::slug($faker->words(3, true)), // Slug generato dal nome
             ]);
         }
     }

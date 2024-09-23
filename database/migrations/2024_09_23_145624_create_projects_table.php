@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->string('programming_language');
             $table->string('slug')->unique();
             $table->string('img')->nullable();  // Campo facoltativo
             $table->string('thumbnail_img')->nullable();  // Campo facoltativo
-            $table->string('website_url')->nullable();  // Campo facoltativo
+            $table->string('website_url');  // Campo facoltativo
             $table->timestamps();
         });
     }

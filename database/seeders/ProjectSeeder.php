@@ -15,6 +15,6 @@ class ProjectSeeder extends Seeder
     public function run()
     {
         // Chiama la funzione di Helper per creare 100 progetti fittizi
-        Helper::seedFakeProjects(100);
+        Helper::seedFakeProjects(10);
     }
 }
