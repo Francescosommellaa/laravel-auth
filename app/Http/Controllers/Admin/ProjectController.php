@@ -42,6 +42,11 @@ class ProjectController extends Controller
         return view('admin.projects.edit', compact('project'));
     }
 
+    public function show(Project $project)
+    {
+        return view('admin.projects.show', compact('project'));
+    }
+
     public function update(Request $request, Project $project)
     {
         $validatedData = $request->validate([

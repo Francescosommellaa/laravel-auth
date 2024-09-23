@@ -13,7 +13,13 @@ header, aside {
 
 aside {
     height: 97.8vh;
-    width: 200px;
+    min-width: 200px;
     padding: 2em 0;
     border-top: 1px solid grey;
 };
+
+.my-admin-main{
+    padding: 2em;
+    height: 97.5vh;
+    overflow: auto;
+}
