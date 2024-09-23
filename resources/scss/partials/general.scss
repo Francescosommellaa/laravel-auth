@@ -20,6 +20,16 @@ aside {
 
 .my-admin-main{
     padding: 2em;
-    height: 97.5vh;
-    overflow: auto;
+
+    .my-card{
+        height: 97.5vh;
+        overflow: auto;
+        position: relative;
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    }
 }

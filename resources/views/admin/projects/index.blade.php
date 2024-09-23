@@ -4,8 +4,9 @@
     <div class="container my-admin-main mt-5">
         <div class="row">
             <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <div class="card my-card">
+                    <div
+                        class="card-header bg-primary text-white d-flex justify-content-between align-items-center sticky-header">
                         <h1 class="mb-0">Lista Progetti</h1>
                         <a href="{{ route('admin.projects.create') }}" class="btn btn-light">
                             <i class="fas fa-plus"></i> Aggiungi Nuovo
@@ -23,6 +24,7 @@
                                 <tr>
                                     <th>Nome</th>
                                     <th>Descrizione</th>
+                                    <th>Linguaggi Utilizzati:</th>
                                     <th>Slug</th>
                                     <th>Azioni</th>
                                 </tr>
@@ -32,6 +34,7 @@
                                     <tr>
                                         <td>{{ $project->name }}</td>
                                         <td>{{ Str::limit($project->description, 50) }}</td>
+                                        <td>{{ $project->programming_language }}</td>
                                         <td>{{ $project->slug }}</td>
                                         <td>
                                             <a href="{{ route('admin.projects.show', $project->id) }}"

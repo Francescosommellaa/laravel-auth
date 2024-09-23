@@ -25,6 +25,7 @@
             </div>
             <div class="card-body">
                 <p>{{ $project->description }}</p>
+                <span>{{ $project->programming_language }}</span>
                 @if ($project->img)
                     <img src="{{ $project->img }}" alt="{{ $project->name }}" class="img-fluid">
                 @endif

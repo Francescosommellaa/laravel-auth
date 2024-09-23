@@ -9,25 +9,35 @@
             <div class="card-body">
                 <form action="{{ route('admin.projects.store') }}" method="POST">
                     @csrf
-                    <div class="form-group">
-                        <label for="name">Nome Progetto:</label>
-                        <input type="text" name="name" class="form-control" required>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome Progetto: <span class="text-danger">*</span></label>
+                        <input type="text" name="name" class="form-control"
+                            placeholder="Inserisci il nome del progetto" required>
                     </div>
-                    <div class="form-group">
-                        <label for="description">Descrizione:</label>
-                        <textarea name="description" class="form-control" rows="5" required></textarea>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Descrizione: <span class="text-danger">*</span></label>
+                        <textarea name="description" class="form-control" rows="5" placeholder="Descrivi il progetto" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="img">Immagine:</label>
-                        <input type="text" name="img" class="form-control">
+                    <div class="mb-3">
+                        <label for="programming_language" class="form-label">Linguaggi Utilizzati: <span
+                                class="text-danger">*</span></label>
+                        <input type="text" name="programming_language" class="form-control"
+                            placeholder="Es. HTML, CSS, JavaScript" required>
                     </div>
-                    <div class="form-group">
-                        <label for="thumbnail_img">Miniatura:</label>
-                        <input type="text" name="thumbnail_img" class="form-control">
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Immagine:</label>
+                        <input type="url" name="img" class="form-control"
+                            placeholder="Inserisci l'URL dell'immagine">
                     </div>
-                    <div class="form-group">
-                        <label for="website_url">Sito Web:</label>
-                        <input type="url" name="website_url" class="form-control">
+                    <div class="mb-3">
+                        <label for="thumbnail_img" class="form-label">Miniatura:</label>
+                        <input type="url" name="thumbnail_img" class="form-control"
+                            placeholder="Inserisci l'URL della miniatura">
+                    </div>
+                    <div class="mb-3">
+                        <label for="website_url" class="form-label">Sito Web: <span class="text-danger">*</span></label>
+                        <input type="url" name="website_url" class="form-control"
+                            placeholder="Inserisci l'URL del sito web" required>
                     </div>
                     <button type="submit" class="btn btn-success mt-3">Crea Progetto</button>
                 </form>
