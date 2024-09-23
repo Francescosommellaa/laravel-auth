@@ -4,7 +4,7 @@ use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\PageController;
-use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\Admin\ProjectController;
 
 // Rotta per la homepage per gli ospiti
 Route::get('/', [PageController::class, 'index'])->name('guest.index');
