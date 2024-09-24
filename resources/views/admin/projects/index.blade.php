@@ -12,7 +12,7 @@
                             <i class="fas fa-plus"></i> Aggiungi Nuovo
                         </a>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body my-body-card">
                         @if (session('success'))
                             <div class="alert alert-success">
                                 {{ session('success') }}
@@ -60,6 +60,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $projects->links() }}
                     </div>
                 </div>
             </div>

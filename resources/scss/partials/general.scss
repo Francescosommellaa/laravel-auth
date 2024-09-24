@@ -1,35 +1,33 @@
-header, aside {
-    li{
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-        color: white;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-};
+body{
+    overflow: hidden;
 
-aside {
-    height: 97.8vh;
-    min-width: 200px;
-    padding: 2em 0;
-    border-top: 1px solid grey;
-};
 
-.my-admin-main{
-    padding: 2em;
-
-    .my-card{
-        height: 97.5vh;
+    .my-body-card {
         overflow: auto;
-        position: relative;
+        height: 85vh;
+    }
 
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+    header, aside {
+        li{
+            list-style: none;
         }
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    };
+
+    aside {
+        height: 97.8vh;
+        min-width: 200px;
+        padding: 2em 0;
+        border-top: 1px solid grey;
+    };
+
+    .my-admin-main{
+        padding: 2em;
     }
 }
